@@ -1,0 +1,10 @@
+[22-Aug-2013 16:17:43 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[29-Jan-2014 06:12:38 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_filter() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[29-Jan-2014 06:12:42 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[11-Mar-2014 20:00:54 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[07-Aug-2014 07:39:55 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[23-Mar-2015 07:31:07 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_filter() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[23-Mar-2015 07:31:19 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[01-Apr-2015 11:56:59 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[01-Apr-2015 11:57:00 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_filter() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[09-Apr-2015 04:03:43 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/tatiana/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3

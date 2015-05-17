@@ -1,0 +1,237 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	/* .menu is clearfixed inside mixins.scss */
+	.menu {
+		ul {
+			li {
+				a {
+
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+
+					}
+				}
+
+				&:first-child {}
+				&:last-child {}
+
+				/*
+				plan your menus and drop-downs wisely.
+				*/
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .menu ul li */
+
+			/* highlight current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+	} /* end .menu */
+}
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* entry content */
+.entry-content {
+
+
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
+	}
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
+	}
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
+	}
+
+} /* end .entry-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+
+/*********************
+NEW STYLES
+*********************/
+/* General */
+.section {
+    padding: 0 50px 50px;
+}
+#content {
+    #inner-content {
+    	margin: 0 1.5% 1.5%;
+    	.content-body {
+    		padding-top: 30px;
+    	}
+    }
+}
+.fa:before {
+    padding-right: 20px;
+    font-size: 40px;
+    top: 3px;
+}
+/* Home */
+#content #inner-content #intro {
+    .inner-section {
+    	width: 60%;
+    	padding: 0 20px 20px 0;
+    	position: absolute;
+    	bottom: 0;
+    	right: 0;
+    	padding: 0 10px 100px 0;
+    	top: 35%;
+	}
+
+	h1 {
+    	font-size: 52px;
+    	line-height: 44px;
+    	text-shadow: none;
+	}
+
+	h2 {
+    	font-size: 14px;
+    	line-height: 14px;
+    	word-spacing: 25px;
+    	text-shadow: none;
+	}
+}
+.home {
+	.breakline { 
+		display: block;
+	}
+	.home-currently {
+		margin-top: 10%;
+		color: $white;
+		display: block;
+	}
+	.home-currently-cont  {
+		color: $white;
+		display: block;
+	}
+}
+
+/* Work */
+.work-section {
+	.work-excerpt {
+		width: 80%;
+		margin: 15px auto;
+		float: none;
+	}
+	.work-image {
+		width: 80%;
+		float: none;
+		margin: 15px auto;
+	}
+}
+#inner-content.single-content {
+	.singleSection {
+		p {
+			font-size:14px;
+			line-height:20px;
+		}
+		blockquote p {
+			font-size:25px;
+			line-height:35px;
+		}
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 10px 7.5%;	
+		}
+	}
+}
+
+/* Thoughts */
+.thoughts-cont {
+	h2 {
+		font-size: 30px;
+		line-height: 1.1em;
+		margin-bottom:20px;
+	}
+	p {
+		margin-top:20px;
+		font-size: 28px;
+		line-height: 1.1em;
+	}
+	.thoughtlink a {
+		font-size: 24px;
+		.fa {
+			font-size: 18px;
+		}
+	}
+}
+
+/* Profile */
+.profile-cont {
+	h2 {
+		font-size: 35px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	.ul.profile-links li {
+		margin: 0 25px;
+	}
+}

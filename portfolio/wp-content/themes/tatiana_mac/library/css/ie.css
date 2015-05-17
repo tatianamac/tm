@@ -1,0 +1,722 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 30, ../scss/breakpoints/_481up.scss */
+.nav {
+  /* .menu is clearfixed inside mixins.scss */
+  /* end .menu */
+}
+/* line 32, ../scss/breakpoints/_481up.scss */
+.nav .menu {
+  /* end .menu ul */
+}
+/* line 33, ../scss/breakpoints/_481up.scss */
+.nav .menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 34, ../scss/breakpoints/_481up.scss */
+.nav .menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 35, ../scss/breakpoints/_481up.scss */
+.nav .menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+/* line 80, ../scss/breakpoints/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 84, ../scss/breakpoints/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 89, ../scss/breakpoints/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 94, ../scss/breakpoints/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/*********************
+NEW STYLES
+*********************/
+/* General */
+/* line 121, ../scss/breakpoints/_481up.scss */
+.section {
+  padding: 0 50px 50px;
+}
+
+/* line 125, ../scss/breakpoints/_481up.scss */
+#content #inner-content {
+  margin: 0 1.5% 1.5%;
+}
+/* line 127, ../scss/breakpoints/_481up.scss */
+#content #inner-content .content-body {
+  padding-top: 30px;
+}
+
+/* line 132, ../scss/breakpoints/_481up.scss */
+.fa:before {
+  padding-right: 20px;
+  font-size: 40px;
+  top: 3px;
+}
+
+/* Home */
+/* line 139, ../scss/breakpoints/_481up.scss */
+#content #inner-content #intro .inner-section {
+  width: 60%;
+  padding: 0 20px 20px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px 100px 0;
+  top: 35%;
+}
+/* line 149, ../scss/breakpoints/_481up.scss */
+#content #inner-content #intro h1 {
+  font-size: 52px;
+  line-height: 44px;
+  text-shadow: none;
+}
+/* line 155, ../scss/breakpoints/_481up.scss */
+#content #inner-content #intro h2 {
+  font-size: 14px;
+  line-height: 14px;
+  word-spacing: 25px;
+  text-shadow: none;
+}
+
+/* line 163, ../scss/breakpoints/_481up.scss */
+.home .breakline {
+  display: block;
+}
+/* line 166, ../scss/breakpoints/_481up.scss */
+.home .home-currently {
+  margin-top: 10%;
+  color: #fff;
+  display: block;
+}
+/* line 171, ../scss/breakpoints/_481up.scss */
+.home .home-currently-cont {
+  color: #fff;
+  display: block;
+}
+
+/* Work */
+/* line 179, ../scss/breakpoints/_481up.scss */
+.work-section .work-excerpt {
+  width: 80%;
+  margin: 15px auto;
+  float: none;
+}
+/* line 184, ../scss/breakpoints/_481up.scss */
+.work-section .work-image {
+  width: 80%;
+  float: none;
+  margin: 15px auto;
+}
+
+/* line 192, ../scss/breakpoints/_481up.scss */
+#inner-content.single-content .singleSection p {
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 196, ../scss/breakpoints/_481up.scss */
+#inner-content.single-content .singleSection blockquote p {
+  font-size: 25px;
+  line-height: 35px;
+}
+/* line 200, ../scss/breakpoints/_481up.scss */
+#inner-content.single-content .singleSection h1, #inner-content.single-content .singleSection h2, #inner-content.single-content .singleSection h3, #inner-content.single-content .singleSection h4, #inner-content.single-content .singleSection h5, #inner-content.single-content .singleSection h6, #inner-content.single-content .singleSection p {
+  margin: 10px 7.5%;
+}
+
+/* Thoughts */
+/* line 208, ../scss/breakpoints/_481up.scss */
+.thoughts-cont h2 {
+  font-size: 30px;
+  line-height: 1.1em;
+  margin-bottom: 20px;
+}
+/* line 213, ../scss/breakpoints/_481up.scss */
+.thoughts-cont p {
+  margin-top: 20px;
+  font-size: 28px;
+  line-height: 1.1em;
+}
+/* line 218, ../scss/breakpoints/_481up.scss */
+.thoughts-cont .thoughtlink a {
+  font-size: 24px;
+}
+/* line 220, ../scss/breakpoints/_481up.scss */
+.thoughts-cont .thoughtlink a .fa {
+  font-size: 18px;
+}
+
+/* Profile */
+/* line 228, ../scss/breakpoints/_481up.scss */
+.profile-cont h2 {
+  font-size: 35px;
+}
+/* line 231, ../scss/breakpoints/_481up.scss */
+.profile-cont h3 {
+  font-size: 20px;
+}
+/* line 234, ../scss/breakpoints/_481up.scss */
+.profile-cont .ul.profile-links li {
+  margin: 0 25px;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 26, ../scss/breakpoints/_768up.scss */
+.wrap {
+  width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 42, ../scss/breakpoints/_768up.scss */
+.nav {
+  border: 0;
+  margin: 40px 0 0;
+  float: right;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 46, ../scss/breakpoints/_768up.scss */
+.nav ul {
+  background: #323944;
+  margin-top: 0;
+}
+/* line 50, ../scss/breakpoints/_768up.scss */
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 54, ../scss/breakpoints/_768up.scss */
+.nav li a {
+  border-bottom: 0;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+/* line 61, ../scss/breakpoints/_768up.scss */
+.nav li a:hover, .nav li a:focus {
+  color: #323944;
+  text-decoration: underline;
+}
+/* line 73, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+/* line 82, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+/* line 84, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 101, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+/* line 111, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu li ul,
+.nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+/* line 126, ../scss/breakpoints/_768up.scss */
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 146, ../scss/breakpoints/_768up.scss */
+.sidebar {
+  margin-top: 2.2em;
+}
+
+/* line 150, ../scss/breakpoints/_768up.scss */
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+/* line 155, ../scss/breakpoints/_768up.scss */
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+/* line 160, ../scss/breakpoints/_768up.scss */
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+/* line 168, ../scss/breakpoints/_768up.scss */
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 276, ../scss/breakpoints/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/*********************
+NEW STYLES
+*********************/
+/* General */
+/* line 295, ../scss/breakpoints/_768up.scss */
+.nav-collapse .top-nav {
+  margin: 30px 20px 0px;
+  z-index: 999999;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+/* line 302, ../scss/breakpoints/_768up.scss */
+#tatiana-logo {
+  width: auto;
+  float: left;
+  margin: 50px 0 0 3.398058252427%;
+}
+
+/* line 308, ../scss/breakpoints/_768up.scss */
+#content #inner-content #intro .inner-section {
+  width: 50%;
+  padding: 0 100px 100px 0;
+  top: 25%;
+}
+/* line 314, ../scss/breakpoints/_768up.scss */
+#content #inner-content #intro h1 {
+  font-size: 55px;
+  line-height: 50px;
+}
+/* line 319, ../scss/breakpoints/_768up.scss */
+#content #inner-content #intro h2 {
+  font-size: 14px;
+  line-height: 14px;
+  word-spacing: 30px;
+}
+
+/* line 325, ../scss/breakpoints/_768up.scss */
+.show-menu {
+  display: none;
+}
+
+/* line 329, ../scss/breakpoints/_768up.scss */
+ul {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 333, ../scss/breakpoints/_768up.scss */
+ul li, li a {
+  width: auto;
+}
+
+/* line 337, ../scss/breakpoints/_768up.scss */
+#content #inner-content {
+  margin: 0 3.398058252427% 3.398058252427%;
+}
+/* line 339, ../scss/breakpoints/_768up.scss */
+#content #inner-content .content-body {
+  padding-top: 60px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 349, ../scss/breakpoints/_768up.scss */
+.header {
+  /*background-color: $fff;*/
+  height: 90px;
+}
+
+/* Work */
+/* line 356, ../scss/breakpoints/_768up.scss */
+.work-section .work-excerpt {
+  width: 26.701570680628%;
+  margin-right: 9.045226130653%;
+  float: left;
+}
+/* line 361, ../scss/breakpoints/_768up.scss */
+.work-section .work-image {
+  width: 63.325%;
+  float: left;
+}
+
+/* Thoughts */
+/* line 369, ../scss/breakpoints/_768up.scss */
+.thoughts-cont h2 {
+  font-size: 30px;
+  line-height: 1.1em;
+  margin-bottom: 40px;
+  color: #111;
+}
+/* line 375, ../scss/breakpoints/_768up.scss */
+.thoughts-cont p {
+  margin-top: 48px;
+  font-size: 25px;
+  line-height: 1.25em;
+}
+/* line 380, ../scss/breakpoints/_768up.scss */
+.thoughts-cont .thoughtlink a {
+  font-size: 18px;
+}
+/* line 382, ../scss/breakpoints/_768up.scss */
+.thoughts-cont .thoughtlink a .fa {
+  font-size: 20px;
+}
+
+/* line 389, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection p {
+  font-size: 18px;
+  line-height: 28px;
+}
+/* line 393, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection blockquote p {
+  font-size: 32px;
+  line-height: 42px;
+}
+/* line 397, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection h1, #inner-content.single-content .singleSection h2, #inner-content.single-content .singleSection h3, #inner-content.single-content .singleSection h4, #inner-content.single-content .singleSection h5, #inner-content.single-content .singleSection h6, #inner-content.single-content .singleSection p {
+  margin: 10px 7.5%;
+}
+/* line 400, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection .singleBody {
+  width: 85%;
+}
+/* line 403, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection .imgCaption {
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px 0;
+  background-color: #fff;
+  padding: 30px;
+  width: 20%;
+}
+/* line 411, ../scss/breakpoints/_768up.scss */
+#inner-content.single-content .singleSection .wp-caption {
+  display: inline-block;
+  margin: 16px 0 16px;
+  max-width: 80%;
+}
+
+/* line 418, ../scss/breakpoints/_768up.scss */
+.profile-cont {
+  text-align: center;
+  margin: 0 2.136752136752%;
+}
+/* line 421, ../scss/breakpoints/_768up.scss */
+.profile-cont h2 {
+  font-size: 50px;
+}
+/* line 424, ../scss/breakpoints/_768up.scss */
+.profile-cont h3 {
+  font-size: 24px;
+}
+
+/* Nav */
+/* line 430, ../scss/breakpoints/_768up.scss */
+.nav-collapse li {
+  width: auto;
+  display: inline-block;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+/* line 12, ../scss/breakpoints/_1030up.scss */
+.wrap {
+  width: 1040px;
+}
+
+/*********************
+NEW STYLES
+*********************/
+/* Home */
+/* line 22, ../scss/breakpoints/_1030up.scss */
+#content #inner-content #intro .inner-section {
+  padding: 0 100px 100px 0;
+  top: 25%;
+}
+/* line 27, ../scss/breakpoints/_1030up.scss */
+#content #inner-content #intro h1 {
+  font-size: 90px;
+  line-height: 80px;
+}
+/* line 32, ../scss/breakpoints/_1030up.scss */
+#content #inner-content #intro h2 {
+  font-size: 24px;
+  line-height: 18px;
+  word-spacing: 50px;
+}
+
+/* line 39, ../scss/breakpoints/_1030up.scss */
+.home .home-currently-cont {
+  margin: 10px 20px 15px;
+}
+/* line 41, ../scss/breakpoints/_1030up.scss */
+.home .home-currently-cont p {
+  font-size: 100%;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

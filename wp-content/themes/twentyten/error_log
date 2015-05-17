@@ -1,0 +1,2 @@
+[01-Jun-2013 10:06:30 US/Pacific] PHP Fatal error:  Call to undefined function get_header() in /home/tatiana/public_html/wp-content/themes/twentyten/404.php on line 10
+[01-Jun-2014 02:40:24 America/Los_Angeles] PHP Fatal error:  Call to undefined function get_header() in /home/tatiana/public_html/wp-content/themes/twentyten/search.php on line 10
