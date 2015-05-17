@@ -1,0 +1,4 @@
+*.log
+.htaccess
+*wp-config.php
+
