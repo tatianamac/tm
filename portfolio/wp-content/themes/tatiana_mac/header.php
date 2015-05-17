@@ -52,11 +52,11 @@
 
 				<div id="inner-header">
 
-					<a href="/">
+					
 						<div id="tatiana-logo">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/tatianamac_logo.svg" alt="Tatiana Mac">
+							<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tatiana_mac_logo.svg" alt="Tatiana Mac"></a>
 						</div>
-					</a>
+					
 					<nav role="navigation" id="menu" class="nav-collapse">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container

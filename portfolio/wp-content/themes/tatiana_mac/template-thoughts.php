@@ -15,10 +15,12 @@
                                 $thoughts = new WP_Query();
                                 $thoughts->query('posts_per_page=-1');
                                 if ( $thoughts->have_posts() ) : while ( $thoughts->have_posts() ) : $thoughts->the_post(); ?>
-                                <h2><?php the_title(); ?></h2>
-                                <div class="breakline"></div>
-                                <?php the_excerpt(); ?>
-                                <div class="thoughtlink"><a href="<?php echo the_permalink(); ?>"><?php if(get_field('cta_headline')){echo get_field('cta_headline');} else{echo "Read More ";}?></a></div>
+                                <div class="thought-excerpt">
+									<h2><?php the_title(); ?></h2>
+                                	<div class="breakline"></div>
+                                	<?php the_excerpt(); ?>
+	                                <div class="thoughtlink"><a href="<?php echo the_permalink(); ?>"><?php if(get_field('cta_headline')){echo get_field('cta_headline');} else{echo "Read More";}?> &raquo;</a></div>
+								</div>
                                 <?php endwhile; endif;  wp_reset_query(); //wp_reset_postdata();  ?>
                             </div>
                             <div class="page-bg">

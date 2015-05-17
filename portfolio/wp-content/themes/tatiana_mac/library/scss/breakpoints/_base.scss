@@ -174,7 +174,7 @@ and more scalable.
 			display: block;
 			color: $black;
 			text-decoration: none;
-			padding: 15px 25px;
+			padding: 15px 0;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -937,7 +937,7 @@ NEW STYLES
     		}
     	}
     	.content-body {
-    		padding-top: 20px;
+    		padding-top: 40px;
     		z-index: 1000;
     		position: relative;
     	}
@@ -947,7 +947,7 @@ NEW STYLES
 .section {
     padding: 0 20px 50px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -990,7 +990,10 @@ NEW STYLES
     padding-right: 0px;
     font-size: 30px;
     position: relative;
-    top: 3px;
+    top: 3px;	
+}
+.fa-envelope:hover, .fa-twitter:hover, .fa-linkedin:hover {
+	color:#f0eb60;
 }
 .top-nav {
     width: 100%;
@@ -1006,15 +1009,18 @@ NEW STYLES
     		text-decoration: none!important;
     	}
 
-    	a:hover {
-    		border: 2px solid #f3f2f4;	
+    	a:hover, a:active, a:visited {
+    		border: 2px solid transparent;
+			color:$link-color;	
     	}
     }
 }
 #tatiana-logo {
-	width: 100%;
+	max-width: 100%;
 	text-align: center;
 	margin-top: 15px;
+	a, a:hover, a:visited, a:active {border:0;}
+	img {max-width:220px;}
 }
 .tag {
     padding: 30px 40px;
@@ -1039,6 +1045,9 @@ NEW STYLES
 .breakline {
 	border-top: 1px $white solid;
 	width: 100%;
+}
+.thought-excerpt {
+	margin:0 0 9% 0;
 }
 #inner-content {
 	background-color: #f3f2f4;
@@ -1139,7 +1148,7 @@ NEW STYLES
 		color: #111;
 		font-weight: bold;
 		text-decoration: none;
-		font-size: 24px;
+		font-size: 16px;
 		.fa {
 			font-size: 20px;
 		}
@@ -1421,11 +1430,12 @@ NEW STYLES
     	font-size: 18px;
     	line-height: 14px;
     	color: $white;
-    	word-spacing: 32px;
+    	word-spacing: 40px;
     	font-family: $cabin;
     	text-transform: uppercase;
     	font-weight: bold;
     	text-shadow: 0px 0px 20px #222;
+		margin: 0 0 0 -40px;
 	}
 }
 .home {
@@ -1455,6 +1465,7 @@ NEW STYLES
 		color: #000;
 		p {
 			font-size: 85%;
+			a {color:$white;}
 		}
 	}
 	h6 {
@@ -1483,4 +1494,5 @@ NEW STYLES
   width: 33%;
   display: inline-block;
   float: left;
+  padding:0;
 }

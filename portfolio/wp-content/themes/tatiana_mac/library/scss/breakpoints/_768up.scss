@@ -53,6 +53,7 @@ NAVIGATION STYLES
 
 		a {
 			border-bottom: 0;
+			padding: 15px 25px;
 
 			/*
 			you can use hover styles here even though this size
@@ -293,16 +294,17 @@ NEW STYLES
 *********************/
 /* General */
 .nav-collapse .top-nav {
-    margin: 30px 20px 0px;
+	margin:30px 3.398058252427% 0;
     z-index: 999999;
     position: relative;
     width: auto;
     height: auto;
 }
 #tatiana-logo {
-	width: auto;
+	max-width:220px;
 	float: left;
 	margin: 50px 0 0 3.398058252427%;
+	img {max-width:220px;}
 }
 #content #inner-content #intro {
     .inner-section {
@@ -319,7 +321,8 @@ NEW STYLES
 	h2 {
     	font-size: 14px;
     	line-height: 14px;
-    	word-spacing: 30px;
+	    word-spacing: 60px;
+	    margin: 0 0 0 -60px;
 	}
 }
 .show-menu {
@@ -337,7 +340,7 @@ ul li, li a {
     #inner-content {
     	margin: 0 3.398058252427% 3.398058252427%;
     	.content-body {
-    		padding-top: 60px;
+    		padding-top: 120px;
     	}
     }
 }
@@ -367,18 +370,18 @@ HEADER STYLES
 /* Thoughts */
 .thoughts-cont {
 	h2 {
-		font-size: 30px;
+		font-size: 42px;
 		line-height: 1.1em;
 		margin-bottom:40px;
 		color: #111;
 	}
 	p {
-		margin-top:48px;
+		margin-top:40px;
 		font-size: 25px;
 		line-height: 1.25em;
 	}
 	.thoughtlink a {
-		font-size: 18px;
+		font-size: 24px;
 		.fa {
 			font-size: 20px;
 		}
@@ -427,6 +430,10 @@ HEADER STYLES
 }
 
 /* Nav */
+.nav li a:hover, a:active, a:visited {
+	border: 2px solid #f3f2f4;
+	color:$link-color;	
+}
 .nav-collapse li {
   width: auto;
   display: inline-block;
