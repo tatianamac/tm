@@ -342,6 +342,9 @@ ul li, li a {
     	.content-body {
     		padding-top: 120px;
     	}
+		img {
+		margin:3% 0;
+		}
     }
 }
 
@@ -406,15 +409,23 @@ HEADER STYLES
 		.imgCaption{
 			display: inline-block;
 			vertical-align: top;
-			margin:16px 0;
+			margin:2% 0;
 			background-color:#fff;
 			padding:30px;
 			width:20%;
+			clear:left;
 		}
 		.wp-caption{
 			display: inline-block;
-			margin:16px 0 16px;
 			max-width: 80%;
+		}
+		.bottomLinkNext {
+			float: right;
+			width: 47.5%;
+		}
+		.bottomLinkPrev {
+			float: left;
+			width: 47.5%;
 		}
 	}
 }

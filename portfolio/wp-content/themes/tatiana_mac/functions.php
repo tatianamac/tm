@@ -214,13 +214,13 @@ function create_post_type() {
 	'work',
 		array(
 			'labels' => array(
-				'name' => __( 'Portfolio Items' ),
-				'singular_name' => __( 'Portfolio Item' )
+				'name' => __( 'Work' ),
+				'singular_name' => __( 'Work' )
 			),
 			'public' => true,
 			'has_archive' => true, 
 			'rewrite' => array('slug' => 'work'),
-			'supports' => array('title','thumbnail','editor'),
+			'supports' => array('title','editor','thumbnail'),
 			'exclude_from_search' => false
 		)
 	);

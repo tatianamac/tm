@@ -22,7 +22,7 @@
                                         <?php if(get_field('subheadline')) { ?>
                                         <h5><?php the_field('subheadline'); ?></h5>
                                         <?php } ?>
-                                        <h6><?php the_field('work_cta'); ?><div class="fa fa-angle-double-right"></div></h6>
+										 <div class="thoughtlink"><a href="<?php echo the_permalink(); ?>"><?php if(get_field('cta_headline')){echo get_field('cta_headline');} else{echo "Read More";}?> &raquo;</a></div>
                                 </a>
                             </div>         
                             <div class="work-image">

@@ -429,7 +429,6 @@ POSTS & CONTENT STYLES
 		.wp-caption {
 			max-width: 100%;
 			background: #eee;
-			padding: 5px;
 
 			/* images inside wp-caption */
 			img {
@@ -1054,7 +1053,7 @@ NEW STYLES
 	padding: 55px 8.510638297872% 55px;
 	img {
 		max-width: 100%;
-
+		height:auto;
 	}
 	section {
 		z-index: 1000;
@@ -1254,10 +1253,9 @@ NEW STYLES
 		.wp-caption{
 			padding:0;
 			background:none;
-			display: inline-block;
+			display: block;
 			position:relative;
 			width:100%;
-			margin:16px 0 0px;
 
 			img {
 				float: left;
@@ -1282,6 +1280,7 @@ NEW STYLES
 			background-color:#fff;
 			padding:30px;
 			width:100%;
+			clear:both;
 		}
 		.insertedImgTitle{
 			font-size:24px;
@@ -1309,12 +1308,12 @@ NEW STYLES
 			margin-bottom: 25px;	
 		}
 		.bottomLinkNext {
-			float: right;
-			width: 47.5%;
+			float: none;
+			width: 100%;
 		}
 		.bottomLinkPrev {
-			float: left;
-			width: 47.5%;
+			float: none;
+			width: 100%;
 		}
 		.postNavCont {
 			width: 100%;
@@ -1385,7 +1384,7 @@ NEW STYLES
 			
 			.bottomSocialContainer {
 				margin-top: 40px;
-				margin-left: 40px;
+				margin-left: 0px;
 			}
 		
 		}
