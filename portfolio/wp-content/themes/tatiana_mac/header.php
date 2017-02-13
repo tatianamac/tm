@@ -54,7 +54,7 @@
 
 					
 						<div id="tatiana-logo">
-							<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tatiana_mac_logo.svg" alt="Tatiana Mac"></a>
+							<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tatianamac_logo.svg" alt="Tatiana Mac"></a>
 						</div>
 					
 					<nav role="navigation" id="menu" class="nav-collapse">
